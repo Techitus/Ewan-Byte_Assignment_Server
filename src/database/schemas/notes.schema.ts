@@ -1,7 +1,14 @@
+import { randomUUID } from "crypto";
 
 const mongoose = require('mongoose')
 
 const noteSchema = new mongoose.Schema({
+    id:{
+        type:String,
+        default: randomUUID()
+
+
+    },
     title: {
         type : String,
         required : true
